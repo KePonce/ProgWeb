@@ -144,7 +144,7 @@ class Content extends Component {
                                 <td>
                                   <Button bsStyle="primary" onClick={() => this.replaceModalItem(_id,PersonList._id, PersonList.nombre, PersonList.apellido,
 									PersonList.edad, PersonList.usuario,PersonList.pais,PersonList.img)}>Editar</Button>
-                                    <Button bsStyle="danger" onClick={() => this.deleteItem(PersonList._id)}>Eliminar</Button>
+                                  <Button bsStyle="danger" onClick={() => this.deleteItem(PersonList._id)}>Eliminar</Button>
                                 </td>
                             </tr>
 

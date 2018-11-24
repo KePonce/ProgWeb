@@ -120,8 +120,7 @@ class Content extends Component {
                             <Th>Edad</Th>
                             <Th>Usuario</Th>
                             <Th>Pais</Th>
-                            <Th></Th> 
-                            <Th></Th> 
+                            <Th>Acciones</Th> 
                         </Tr>
                     </Thead>
                     <Tbody>
@@ -145,9 +144,7 @@ class Content extends Component {
                                 <td>
                                   <Button bsStyle="primary" onClick={() => this.replaceModalItem(_id,PersonList._id, PersonList.nombre, PersonList.apellido,
 									PersonList.edad, PersonList.usuario,PersonList.pais,PersonList.img)}>Editar</Button>
-								                </td>
-                                <td>
-                                    <Button class="btn btn-block" onClick={() => this.deleteItem(PersonList._id)}>Eliminar</Button>
+                                    <Button bsStyle="danger" onClick={() => this.deleteItem(PersonList._id)}>Eliminar</Button>
                                 </td>
                             </tr>
 

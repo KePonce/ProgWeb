@@ -9,11 +9,11 @@ class ModalEdit extends Component {
     this.handleSave = this.handleSave.bind(this);
     this.state = {
       _id:0,
-      nombre: '',
-      apellido : '',
-      usuario : '',
-      edad : '',
-      pais : ''
+        nombre: '',
+        apellido : '',
+        edad : '',
+        usuario : '',
+        pais : ''
     }
 }
 
@@ -22,8 +22,8 @@ class ModalEdit extends Component {
         _id: nextProps._id,
         nombre: nextProps.nombre,
         apellido: nextProps.apellido,
-        usuario: nextProps.usuario,
         edad: nextProps.edad,
+        usuario: nextProps.usuario,
         pais: nextProps.pais,
       });
     }
@@ -47,7 +47,7 @@ class ModalEdit extends Component {
             aria-labelledby="contained-modal-title-lg"
           >
             <Modal.Header closeButton>
-              <Modal.Title id="contained-modal-title-lg">Editar Persona </Modal.Title>
+              <Modal.Title id="contained-modal-title-lg">Editar</Modal.Title>
             </Modal.Header>
             <Modal.Body>
             <Form horizontal>
@@ -70,19 +70,19 @@ class ModalEdit extends Component {
 
                   <FormGroup controlId="formHorizontalCapacidad">
                     <Col componentClass={ControlLabel} sm={2}>
-                      Usuario
+                      Edad
                     </Col>
                     <Col sm={10}>
-                      <FormControl type="text" placeholder="Usuario" value={this.state.usuario} id="usuario" onChange={(e) => this.onChange(e)}/>
+                      <FormControl type="text" placeholder="Edad" value={this.state.edad} id="edad" onChange={(e) => this.onChange(e)}/>
                     </Col>
                   </FormGroup>
 
                    <FormGroup controlId="formHorizontalBateria">
                     <Col componentClass={ControlLabel} sm={2}>
-                      Edad
+                      Usuario
                     </Col>
                     <Col sm={10}>
-                      <FormControl type="text" placeholder="Edad" value={this.state.edad} id="edad" onChange={(e) => this.onChange(e)}/>
+                      <FormControl type="text" placeholder="Usuario" value={this.state.usuario} id="usuario" onChange={(e) => this.onChange(e)}/>
                     </Col>
                   </FormGroup>
 

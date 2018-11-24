@@ -10,8 +10,8 @@ class ModalAdd extends Component {
        _id:0,
         nombre: '',
         apellido : '',
-        usuario : '',
         edad : '',
+        usuario : '',
         pais : ''
     }
 }
@@ -23,17 +23,17 @@ class ModalAdd extends Component {
   AddList(){
     var nombre = this.state.nombre;
     var apellido = this.state.apellido;
-    var usuario = this.state.usuario;
     var edad = this.state.edad;
+    var usuario = this.state.usuario;
     var pais = this.state.pais;
-      var persona = {
+      var person = {
         nombre:nombre,
         apellido:apellido,
-        usuario:usuario,
         edad:edad,
-        pais:pais,
+        usuario:usuario,
+        pais:pais
       }
-      this.props.saveModalAdd(persona);
+      this.props.saveModalAdd(person);
     }
     render() {
         return (
@@ -43,7 +43,7 @@ class ModalAdd extends Component {
             aria-labelledby="contained-modal-title-lg"
           >
             <Modal.Header closeButton>
-              <Modal.Title id="contained-modal-title-lg">Agregar Persona</Modal.Title>
+              <Modal.Title id="contained-modal-title-lg">Agregar</Modal.Title>
             </Modal.Header>
             <Modal.Body>
             <Form horizontal>
@@ -52,7 +52,7 @@ class ModalAdd extends Component {
                      Nombre
                     </Col>
                     <Col sm={10}>
-                      <FormControl type="text" placeholder="Nombre Persona" id="nombre" onChange={(e) => this.onChange(e)} />
+                      <FormControl type="text" placeholder="Nombre " id="nombre" onChange={(e) => this.onChange(e)} />
                     </Col>
                   </FormGroup>
                   <FormGroup controlId="formHorizontalPantalla">
@@ -60,34 +60,34 @@ class ModalAdd extends Component {
                      Apellido
                     </Col>
                     <Col sm={10}>
-                      <FormControl type="text" placeholder="Tamaño Pantalla" id="apellido" onChange={(e) => this.onChange(e)}/>
+                      <FormControl type="text" placeholder="Apellido" id="apellido" onChange={(e) => this.onChange(e)}/>
                     </Col>
                   </FormGroup>
 
                   <FormGroup controlId="formHorizontalCapacidad">
                     <Col componentClass={ControlLabel} sm={2}>
-                      Usuario
-                    </Col>
-                    <Col sm={10}>
-                      <FormControl type="text" placeholder="Capacidad"  id="usuario" onChange={(e) => this.onChange(e)}/>
-                    </Col>
-                  </FormGroup>
-
-                   <FormGroup controlId="formHorizontaledaderia">
-                    <Col componentClass={ControlLabel} sm={2}>
                       Edad
                     </Col>
                     <Col sm={10}>
-                      <FormControl type="text" placeholder="edaderia"  id="edad" onChange={(e) => this.onChange(e)}/>
+                      <FormControl type="text" placeholder="Edad"  id="edad" onChange={(e) => this.onChange(e)}/>
                     </Col>
                   </FormGroup>
 
-                   <FormGroup controlId="formHorizontalpais">
+                   <FormGroup controlId="formHorizontalBateria">
+                    <Col componentClass={ControlLabel} sm={2}>
+                      Usuario
+                    </Col>
+                    <Col sm={10}>
+                      <FormControl type="text" placeholder="Usuario"  id="usuario" onChange={(e) => this.onChange(e)}/>
+                    </Col>
+                  </FormGroup>
+
+                   <FormGroup controlId="formHorizontalRam">
                     <Col componentClass={ControlLabel} sm={2}>
                       Pais
                     </Col>
                     <Col sm={10}>
-                      <FormControl type="text" placeholder="usuarioria pais"  id="pais" onChange={(e) => this.onChange(e)}/>
+                      <FormControl type="text" placeholder="Pais"  id="pais" onChange={(e) => this.onChange(e)}/>
                     </Col>
                   </FormGroup>
                   </Form>

@@ -20,7 +20,7 @@ class Header extends Component {
        <Navbar inverse>
                 <Navbar.Header>
                 <Navbar.Brand>
-                    <a href="#">controlpersonal.com</a>
+                    <a href="#">Control de Personal</a>
                 </Navbar.Brand>
                 <Navbar.Toggle />
                 </Navbar.Header>

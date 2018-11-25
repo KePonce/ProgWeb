@@ -1,11 +1,11 @@
 //declaracion de cliente mongo db y ConnectionString
 var MongoClient = require('mongodb').MongoClient;
-var url = "mongodb://localhost:27017/PersonBDD";
+var url = "mongodb://mongo:27017/PersonBDD";
 var express = require("express");
 var app = express();
 var bodyParser = require('body-parser');
 var redis = require("redis");
-var redis_client = redis.createClient();
+var redis_client = redis.createClient({ "host": 'redis', "port": "6379" });
 //var redis_client = redis.createClient(process.env.REDIS_URL);
 app.use(bodyParser.json()); // support json encoded bodies
 app.use(bodyParser.urlencoded({ extended: true })); // support encoded bodies

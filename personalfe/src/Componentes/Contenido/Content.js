@@ -165,7 +165,7 @@ class Content extends Component {
           show={this.state.adShow} 
           onHide={adclose} />    
                 </Table>
-</div>  
+        </div>  
     );
   }
 }

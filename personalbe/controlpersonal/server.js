@@ -117,7 +117,7 @@ function GetPersons()
     MongoClient.connect(url, function(err, db) {
         if (err) return reject('Fallo la conexion a la base de datos');
         console.log("connected to Database");
-        var dbo = db.db("PersonBDD");
+        var dbo = db.db("progweb");
         dbo.collection("persons").find({}).toArray( function(err, result) {
             if (err) return reject('Fallo el query a la base de datos');
             resolve(result);
@@ -156,7 +156,7 @@ function GetPerson_mongo(id)
         MongoClient.connect(url, function(err, db) {
             if (err) return reject('Fallo la conexion a la base de datos');
             console.log("connected to Database");
-            var dbo = db.db("PersonBDD");
+            var dbo = db.db("progweb");
             var ObjectId = require('mongodb').ObjectID;
             var query = {_id: new ObjectId(id)};
             dbo.collection("persons").find(query).toArray( function(err, result) {
@@ -178,7 +178,7 @@ function insertPerson(myobj)
     MongoClient.connect(url, function(err, db) {
         if (err) throw err;
         console.log("connected to Database");
-        var dbo = db.db("PersonBDD");
+        var dbo = db.db("progweb");
         dbo.collection("persons").insertOne(myobj, function(err, res) {
           if (err) throw err;
           console.log("1 document inserted");
@@ -194,7 +194,7 @@ function deletePerson(id)
         redis_delete(id)
         MongoClient.connect(url, function(err, db) {
             if (err) return reject(err.message);
-            var dbo = db.db("PersonBDD");
+            var dbo = db.db("progweb");
             var ObjectId = require('mongodb').ObjectID;
             var query = {_id: new ObjectId(id)};
             dbo.collection("persons").deleteOne(query, function(err, obj) {

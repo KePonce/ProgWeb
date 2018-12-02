@@ -3,7 +3,7 @@ import './css/Content.css';
 import ModalEdit from './Modals/ModalEdit'
 import ModalAdd from './Modals/ModalAdd'
 import { Table, Thead, Tbody, Tr, Th, Td } from 'react-super-responsive-table'
-import { Button, Col, Row, Grid, Thumbnail, FormGroup, Form, ControlLabel, FormControl} from 'react-bootstrap';
+import { Button} from 'react-bootstrap';
 import 'react-super-responsive-table/dist/SuperResponsiveTableStyle.css'
 class Content extends Component {
   constructor(props, context) {
@@ -26,7 +26,7 @@ class Content extends Component {
     }
   async componentDidMount(){
     try {
-      const response = await fetch('http://localhost:3001/api/V1/Persona/');
+      const response = await fetch('https://backend-224314.appspot.com/api/V1/Persona/');
       if (!response.ok) {
         throw Error(response.statusText);
       }
@@ -50,7 +50,7 @@ class Content extends Component {
   
     async saveModalDetails(item) {
       try {
-        const response = await fetch('http://localhost:3001/api/V1/Persona/', {
+        const response = await fetch('https://backend-224314.appspot.com/api/V1/Persona/', {
           method: 'PUT',
           headers: {
             'Accept': 'application/json',
@@ -70,7 +70,7 @@ class Content extends Component {
 
     async saveModalAdd(item) {
         try {
-          const response = await fetch('http://localhost:3001/api/V1/Persona/', {
+          const response = await fetch('https://backend-224314.appspot.com/api/V1/Persona/', {
           method: 'POST',
           headers: {
             'Accept': 'application/json',
@@ -89,7 +89,7 @@ class Content extends Component {
     }
   
     async deleteItem(index) {
-      const response = await fetch('http://localhost:3001/api/V1/Persona/', {
+      const response = await fetch('https://backend-224314.appspot.com/api/V1/Persona/', {
         method: 'DELETE',
         headers: {
           'Accept': 'application/json',

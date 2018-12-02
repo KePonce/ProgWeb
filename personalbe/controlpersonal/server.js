@@ -1,6 +1,7 @@
 //declaracion de cliente mongo db y ConnectionString
 var MongoClient = require('mongodb').MongoClient;
 var url = "mongodb://kepch:karate123@ds119164.mlab.com:19164/progweb";
+//var url = "mongodb://localhost:27017/progweb";
 var express = require("express");
 var app = express();
 var bodyParser = require('body-parser');
@@ -229,8 +230,8 @@ function redis_delete(id)
 
 //levantamos el servidor
 function createServer(){
-    app.listen(3001, () => {
-    console.log("Server running on port 3001");
+    app.listen(8080, () => {
+    console.log("Server running on port 8080");
     });
 }
 
